@@ -1,30 +1,21 @@
 package kata.clash.units;
 
-public class Giant {
-	private int DefensiveHitpoints;
-	private int OffensiveHitpoints;
-	
-	public int getDefensiveHitpoints() {
-		return DefensiveHitpoints;
-	}
-	private void setDefensiveHitpoints(int defensiveHitpoints) {
-		DefensiveHitpoints = defensiveHitpoints;
-	}
-	public int getOffensiveHitpoints() {
-		return OffensiveHitpoints;
-	}
-	private void setOffensiveHitpoints(int offensiveHitpoints) {
-		OffensiveHitpoints = offensiveHitpoints;
-	}
-    public String ReceiveHit(int attackHitpoints)
-    {
-        throw new UnsupportedOperationException();
-    }
-    
-    public int Move(int seconds)
-    {
-      throw new UnsupportedOperationException();
+import kata.clash.interfaces.Walkable;
+
+public class Giant  extends Unit implements Walkable {
+
+
+    public Giant() {
+        this.defensiveHitpoints = 4500;
+        this.offensiveHitpoints = 3000;
     }
 
-	
+
+
+    public String ReceiveHit(int attackHitpoints) {
+        return super.receiveHit(attackHitpoints,"OUR IRON FISTS WILL BE REMEMBERED FOREVER");
+    }
+
+
+
 }

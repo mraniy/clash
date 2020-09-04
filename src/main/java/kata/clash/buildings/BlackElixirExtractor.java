@@ -7,8 +7,7 @@ public class BlackElixirExtractor {
 
     public static int ProduceElixir(int gems, int blueElixir) throws Exception
     {
-        int blackElixirQuantity = 0;
-
+        int blackElixirQuantity;
         if (gems < 2 || blueElixir < 200)
         {
             throw new DwarfsAngryException();

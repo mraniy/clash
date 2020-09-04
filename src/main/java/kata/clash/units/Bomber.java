@@ -1,30 +1,17 @@
 package kata.clash.units;
 
-public class Bomber {
-	private int DefensiveHitpoints;
-	private int OffensiveHitpoints;
-	
-	public int getDefensiveHitpoints() {
-		return DefensiveHitpoints;
+import kata.clash.interfaces.Runnable;
+
+public class Bomber extends Unit implements Runnable {
+	public Bomber() {
+		this.defensiveHitpoints = 350;
+		this.offensiveHitpoints = 800;
 	}
-	private void setDefensiveHitpoints(int defensiveHitpoints) {
-		DefensiveHitpoints = defensiveHitpoints;
-	}
-	public int getOffensiveHitpoints() {
-		return OffensiveHitpoints;
-	}
-	private void setOffensiveHitpoints(int offensiveHitpoints) {
-		OffensiveHitpoints = offensiveHitpoints;
-	}
+
     public String ReceiveHit(int attackHitpoints)
     {
-        throw new UnsupportedOperationException();
-    }
-    
-    public int Move(int seconds)
-    {
-      throw new UnsupportedOperationException();
+        return super.receiveHit(attackHitpoints,"WHEN YOU play with Explosives is dangerous bussiness");
     }
 
-	
+
 }

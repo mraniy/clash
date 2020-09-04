@@ -1,34 +1,18 @@
 package kata.clash.units;
 
-public class Dragon {
-	private int DefensiveHitpoints;
-	private int OffensiveHitpoints;
+import kata.clash.interfaces.Flyiable;
 
-	public Dragon() {
-		this.DefensiveHitpoints = 5000;
-		this.OffensiveHitpoints = 7500;
-	}
-	public int getDefensiveHitpoints() {
-		return DefensiveHitpoints;
-	}
-	private void setDefensiveHitpoints(int defensiveHitpoints) {
-		DefensiveHitpoints = defensiveHitpoints;
-	}
-	public int getOffensiveHitpoints() {
-		return OffensiveHitpoints;
-	}
-	private void setOffensiveHitpoints(int offensiveHitpoints) {
-		OffensiveHitpoints = offensiveHitpoints;
-	}
-    public String ReceiveHit(int attackHitpoints)
-    {
-        throw new UnsupportedOperationException();
-    }
-    
-   public int Move(int seconds)
-    {
-      throw new UnsupportedOperationException();
+public class Dragon extends Unit implements Flyiable {
+
+    public Dragon() {
+        this.defensiveHitpoints = 5000;
+        this.offensiveHitpoints = 7500;
     }
 
-	
+
+    public String ReceiveHit(int attackHitpoints) {
+        return super.receiveHit(attackHitpoints,"I WILL RISE AGAIN FROM THE ASHES");
+    }
+
+
 }
