@@ -31,7 +31,7 @@ EX1_Exceptions
   the name of the variables , because it didnt respect java conventions , attributes begin with a lowercase letter.
   - as Bomber , Dragon , and all the units have the same structure and behaviour , i chose to add an abstract class 
   as their superclass , and migrate the attributes and their accessors , and even the receiveHit method , is moved to the superclass , as it has 
-  the exact same behaviour in all the subclasses ( test if the defensiveHitPoint is less than 0 , and returns an error message )
+  the exact same behaviour in all the subclasses (test if the defensiveHitPoint is less than 0 , and if so,  returns an error message).
   
   
 **Exercice 3:**  
@@ -40,6 +40,12 @@ EX1_Exceptions
     default method move.
     
     as the formula of the movement depends on the type of movement , and we can expect that the game can evolve to other type of units
-    it's better to add this type of at the abstraction level , rather the concrete level , as it would be necessary to reimplement
-    the move method in all the future units. 
+    it's better to add this type of at the abstraction level , rather than the concrete level , as it would be necessary to reimplement
+    the move method in all the future units :
+    
+    Imagine that we need an new unit Eagle , eagle is like a dragon , it can fly , so the eagle class has just to implement
+    the Flyiable interface.
+      
+    
+   
 
