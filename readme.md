@@ -1,5 +1,3 @@
-I did some refactoring , all the methods that contains uppercase were modified to have methods in all lowercase
-
 **Exercice 1:**
 
 1-write all tests defined in the "Ex1.java" based on the information provided above
@@ -16,8 +14,9 @@ EX1_Exceptions
   - There were some tests missing regarding the BlackElixirFactory :  
     the case where areBlueElixirAndGemsUnitsNotLogicallyRelated 
     returns true was not covered , i added two test cases in EX1_Exceptions.  
-        - when_blue_elixir_1500_and_gems_is_4_throw_invalidquantityexception
-        - when_blue_elixir_600_and_gems_is_15_throw_invalidquantityexception
+      - when_blue_elixir_1500_and_gems_is_4_throw_invalidquantityexception. 
+      - when_blue_elixir_600_and_gems_is_15_throw_invalidquantityexception. 
+          
   - BlackElixirFactory  was refactored , because the tests were a bit tough to understand at first sight , so  i chose to give to each test a meaningful name.
     Verifications was created in order to have more focused classes for controls.    
   
